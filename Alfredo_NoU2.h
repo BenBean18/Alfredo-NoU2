@@ -97,6 +97,7 @@ class NoU_Servo {
         void setMaximumPulse(uint16_t maxPulse);
         uint16_t getMicroseconds();
         float getDegrees();
+        void detach();
     private:
         uint8_t pin;
         uint8_t channel;
