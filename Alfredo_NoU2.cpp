@@ -157,6 +157,10 @@ void NoU_Servo::writeMicroseconds(uint16_t pulseLength) {
     ledcWrite(channel, fmap(pulseLength, 0, 20000, 0, (1 << SERVO_PWM_RES) - 1));
 }
 
+void NoU_Servo::detach() {
+    ledcWrite(channel, 0);
+}
+
 void NoU_Servo::setMinimumPulse(uint16_t minPulse) {
     this->minPulse = minPulse;
 }
